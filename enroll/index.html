@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enroll a Child — Ibadan School for the Deaf</title>
+  <meta name="description"
+    content="Start an enrolment enquiry for your child at Ibadan School for the Deaf, Polytechnic Road, Ijokodo Junction, Ibadan.">
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,600&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+
+<body data-page="enroll" data-base-path="../">
+
+  <div id="site-header-mount"></div>
+
+  <main id="main-content">
+
+    <section class="page-hero on-dark" aria-labelledby="page-title">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="../admissions/index.html">Admissions</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Enroll a Child</span>
+        </nav>
+        <h1 id="page-title">Enroll a Child</h1>
+        <p>Prepare your child&rsquo;s enrolment enquiry for Ibadan School for the Deaf. We collect only essential
+          contact and placement preferences.</p>
+      </div>
+    </section>
+
+    <section class="section section-offwhite" aria-labelledby="enroll-form-heading">
+      <div class="container">
+        <div class="split-grid">
+          <div class="reveal">
+            <div class="notice-box notice-box-warn" role="note">
+              <h3>Frontend Interface &mdash; Backend Integration Pending</h3>
+              <p>
+                This enrolment enquiry form validates your information in the browser and prepares a structured email
+                draft to <strong>ibadanschoolforthedeaf@gmail.com</strong>. Online database submission is not yet
+                connected, so no entries are stored automatically on a server.
+              </p>
+            </div>
+
+            <div class="form-card">
+              <h2 id="enroll-form-heading" style="font-size:1.55rem;margin-bottom:0.4rem;">Enrolment Enquiry Form</h2>
+              <p style="font-size:0.92rem;margin-bottom:1.5rem;">Fields marked with <span
+                  style="color:var(--status-error);font-weight:700;">*</span> are required. Please do not submit
+                sensitive medical records or payment information online.</p>
+
+              <form data-validate-form data-form-title="Child Enrolment Enquiry" novalidate>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="guardian-name">Parent / Guardian Full Name <span class="req"
+                        aria-hidden="true">*</span></label>
+                    <input type="text" id="guardian-name" name="guardian_name" autocomplete="name" required
+                      aria-describedby="guardian-name-error">
+                    <span class="form-error" id="guardian-name-error" role="alert"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="guardian-phone">Telephone Number <span class="req" aria-hidden="true">*</span></label>
+                    <input type="tel" id="guardian-phone" name="guardian_phone" autocomplete="tel"
+                      placeholder="e.g. 0803 000 0000" required aria-describedby="guardian-phone-error">
+                    <span class="form-error" id="guardian-phone-error" role="alert"></span>
+                  </div>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="guardian-email">Email Address</label>
+                    <input type="email" id="guardian-email" name="guardian_email" autocomplete="email"
+                      placeholder="Optional" aria-describedby="guardian-email-error">
+                    <span class="form-error" id="guardian-email-error" role="alert"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="relationship">Relationship to Child <span class="req"
+                        aria-hidden="true">*</span></label>
+                    <select id="relationship" name="relationship" required aria-describedby="relationship-error">
+                      <option value="">Select relationship</option>
+                      <option value="Mother">Mother</option>
+                      <option value="Father">Father</option>
+                      <option value="Guardian / Relative">Guardian / Relative</option>
+                      <option value="Sponsor / Organization">Sponsor / Organization</option>
+                    </select>
+                    <span class="form-error" id="relationship-error" role="alert"></span>
+                  </div>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="child-name">Child&rsquo;s First Name (or Initials) <span class="req"
+                        aria-hidden="true">*</span></label>
+                    <input type="text" id="child-name" name="child_name" required aria-describedby="child-name-error">
+                    <span class="form-error" id="child-name-error" role="alert"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="child-age">Child&rsquo;s Age (Years) <span class="req"
+                        aria-hidden="true">*</span></label>
+                    <input type="number" id="child-age" name="child_age" min="2" max="25" required
+                      aria-describedby="child-age-error">
+                    <span class="form-error" id="child-age-error" role="alert"></span>
+                  </div>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="program-stage">Desired Program Stage <span class="req"
+                        aria-hidden="true">*</span></label>
+                    <select id="program-stage" name="program_stage" required aria-describedby="program-stage-error">
+                      <option value="">Select a program</option>
+                      <option value="Pre-Primary Education">Pre-Primary Education</option>
+                      <option value="Primary Education">Primary Education</option>
+                      <option value="Secondary Education">Secondary Education</option>
+                      <option value="Vocational Training">Vocational Training</option>
+                      <option value="Not Sure — Need Guidance">Not Sure &mdash; Need Guidance</option>
+                    </select>
+                    <span class="form-error" id="program-stage-error" role="alert"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="attendance-type">Preferred Arrangement <span class="req"
+                        aria-hidden="true">*</span></label>
+                    <select id="attendance-type" name="attendance_type" required
+                      aria-describedby="attendance-type-error">
+                      <option value="">Select Day or Boarding</option>
+                      <option value="Day Student">Day Student</option>
+                      <option value="Boarding Student">Boarding Student</option>
+                      <option value="Would Like to Discuss">Would Like to Discuss</option>
+                    </select>
+                    <span class="form-error" id="attendance-type-error" role="alert"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="enquiry-notes">Additional Questions or Preferred Visit Day</label>
+                  <textarea id="enquiry-notes" name="notes"
+                    placeholder="Share your preferred day to visit the campus or any questions for our admissions desk."
+                    aria-describedby="enquiry-notes-error"></textarea>
+                  <span class="form-error" id="enquiry-notes-error" role="alert"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Validate &amp; Prepare Enrolment
+                  Enquiry</button>
+
+                <div class="form-feedback" tabindex="-1" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+
+          <aside class="reveal" aria-label="Admissions support details">
+            <div class="info-box mb-2">
+              <h3>Direct Admissions Contact</h3>
+              <ul>
+                <li><strong>Phone:</strong> <a href="tel:+2348035851464">08035851464</a>, <a
+                    href="tel:+2348060060642">+234-806-006-0642</a></li>
+                <li><strong>Email:</strong> <a
+                    href="mailto:ibadanschoolforthedeaf@gmail.com">ibadanschoolforthedeaf@gmail.com</a>, <a
+                    href="mailto:info@ibadanschoolforthedeaf.com.ng">info@ibadanschoolforthedeaf.com.ng</a></li>
+                <li><strong>Campus:</strong> Polytechnic Road, Ijokodo Junction, Ibadan, Nigeria</li>
+                <li><strong>Postal:</strong> P.O. Box 1965, Dugbe, Ibadan</li>
+              </ul>
+            </div>
+
+            <div class="info-box mb-2">
+              <h3>Before Visiting Campus</h3>
+              <ul>
+                <li>Call ahead to confirm administrative hours and admissions scheduling.</li>
+                <li>Bring any previous school reports or medical hearing assessment notes you already have.</li>
+                <li>Review our <a href="../admissions/index.html">Admissions Guide</a> and <a
+                    href="../programs/index.html">Programs</a> beforehand.</li>
+              </ul>
+            </div>
+
+            <figure class="editorial-photo-card">
+              <img src="../assets/images/visual-flashcards-lesson.jpg"
+                alt="Teacher guiding young deaf pupils with visual flashcards around a table" width="686" height="508"
+                loading="lazy">
+              <figcaption>Supportive, visual classroom instruction welcoming every new pupil.</figcaption>
+            </figure>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="../assets/js/site-shell.js"></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+
+</html>

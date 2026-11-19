@@ -1,0 +1,228 @@
+/* ==========================================================================
+   IBADAN SCHOOL FOR THE DEAF — Design Tokens
+   Source of truth: https://ibadanschoolforthedeaf.com.ng/css/style.css
+   Preserves exact official brand colours with WCAG 2.2 AA/AAA tonal variants.
+   ========================================================================== */
+
+:root {
+  /* ── Official Brand Colours (from ibadanschoolforthedeaf.com.ng) ── */
+  --primary-blue:   #005AE0;   /* Primary brand royal blue (5.74:1 on white) */
+  --dark-blue:      #0A192F;   /* Deep institutional navy (17.5:1 on white) */
+  --light-blue:     #E8F0FE;   /* Soft light-blue tint */
+  --accent:         #2563EB;   /* Accent blue (5.17:1 on white) */
+  --white:          #FFFFFF;
+  --off-white:      #F8FAFC;
+  --text-main:      #1E293B;   /* High-contrast charcoal slate (14.2:1 on white) */
+  --text-muted:     #475569;   /* Accessible muted slate (7.2:1 on white; darkened from #64748B for AAA readability) */
+  --text-subtle:    #64748B;   /* Original muted slate for large labels/captions (4.76:1 on white) */
+
+  /* ── Derived Accessible Tonal Variations (strictly from ISD blue family) ── */
+  --blue-deep:      #0044AD;   /* Primary hover / pressed state (8.2:1 with white) */
+  --blue-mid:       #132B52;   /* Mid-navy gradient partner for hero & inner banners */
+  --blue-surface:   #EFF6FF;   /* Alternate light section surface */
+  --blue-sky:       #93C5FD;   /* Luminous sky-blue highlight on #0A192F dark surfaces (10.4:1) */
+  --blue-glow:      #60A5FA;   /* Interactive accent on dark surfaces (7.6:1 on #0A192F) */
+  --border:         #D8E4F5;   /* Cool blue hairline border */
+  --border-strong:  #B8CEF0;
+
+  /* ── Semantic Status Colours ── */
+  --status-error:   #B91C1C;
+  --status-error-bg:#FEF2F2;
+  --status-warn:    #92400E;
+  --status-warn-bg: #FFFBEB;
+  --status-info:    #0044AD;
+  --status-info-bg: #E8F0FE;
+  --status-ok:      #166534;
+  --status-ok-bg:   #F0FDF4;
+
+  /* ── Typography ── */
+  --font-display:   'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body:      'Outfit', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fz-base:        16px;
+  --lh-body:        1.75;
+  --lh-heading:     1.18;
+
+  /* ── Spacing & Layout ── */
+  --container-max:  1240px;
+  --container-sm:   860px;
+  --section-py:     5rem;
+  --section-px:     clamp(1.25rem, 5vw, 3.5rem);
+  --gap-sm:         1rem;
+  --gap-md:         1.5rem;
+  --gap-lg:         2.5rem;
+
+  /* ── Shape & Radii ── */
+  --radius-sm:      10px;
+  --radius-md:      16px;
+  --radius-lg:      22px;
+  --radius-pill:    999px;
+
+  /* ── Elevation & Shadows (tinted with ISD royal blue) ── */
+  --shadow-sm:      0 2px 10px rgba(10, 25, 47, 0.06);
+  --shadow-md:      0 8px 28px rgba(0, 90, 224, 0.10);
+  --shadow-lg:      0 16px 44px rgba(10, 25, 47, 0.14);
+  --shadow-blue:    0 8px 26px rgba(0, 90, 224, 0.28);
+
+  /* ── Motion ── */
+  --ease:           cubic-bezier(0.22, 1, 0.36, 1);
+  --t-fast:         0.2s ease;
+  --t-base:         0.28s var(--ease);
+  --t-slow:         0.55s var(--ease);
+
+  /* ── Z-Index Layers ── */
+  --z-sticky:       500;
+  --z-dropdown:     600;
+  --z-drawer:       700;
+  --z-fab:          800;
+  --z-lightbox:     900;
+  --z-toast:        950;
+}
+
+/* ==========================================================================
+   Accessibility User-Preference Modes (controlled via Accessibility Toolbar)
+   ========================================================================== */
+
+/* High Contrast Mode */
+body.a11y-hc {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  --white: #0A0A0A;
+  --off-white: #000000;
+  --blue-surface: #0D0D0D;
+  --light-blue: #1A1A1A;
+  --text-main: #FFFFFF;
+  --text-muted: #F1F5F9;
+  --text-subtle: #E2E8F0;
+  --border: #FFE600;
+  --border-strong: #FFE600;
+}
+body.a11y-hc a { color: #FFE600 !important; }
+body.a11y-hc .site-header,
+body.a11y-hc .top-bar,
+body.a11y-hc .site-footer,
+body.a11y-hc .hero,
+body.a11y-hc .page-hero,
+body.a11y-hc .mission-strip,
+body.a11y-hc .why-section,
+body.a11y-hc .support-section,
+body.a11y-hc .mob-drawer {
+  background: #000000 !important;
+  background-image: none !important;
+}
+body.a11y-hc .site-header,
+body.a11y-hc .card,
+body.a11y-hc .prog-card,
+body.a11y-hc .vm-card,
+body.a11y-hc .info-box,
+body.a11y-hc .why-card,
+body.a11y-hc .news-card,
+body.a11y-hc .team-card,
+body.a11y-hc .partner-card,
+body.a11y-hc .faq-item,
+body.a11y-hc .testi-card,
+body.a11y-hc .hstat,
+body.a11y-hc .need-item,
+body.a11y-hc .notice-box {
+  background: #0A0A0A !important;
+  border: 2px solid #FFE600 !important;
+  color: #FFFFFF !important;
+}
+body.a11y-hc .btn {
+  background: #000000 !important;
+  color: #FFE600 !important;
+  border: 2px solid #FFE600 !important;
+}
+body.a11y-hc .btn:hover,
+body.a11y-hc .btn:focus-visible {
+  background: #FFE600 !important;
+  color: #000000 !important;
+}
+
+/* Dark Mode */
+body.a11y-dm {
+  background: #0A192F;
+  color: #F1F5F9;
+  --white: #102442;
+  --off-white: #0A192F;
+  --blue-surface: #0E203C;
+  --light-blue: #18345E;
+  --text-main: #F8FAFC;
+  --text-muted: #CBD5E1;
+  --text-subtle: #94A3B8;
+  --border: rgba(147, 197, 253, 0.18);
+  --border-strong: rgba(147, 197, 253, 0.34);
+  --primary-blue: #3B82F6;
+  --blue-deep: #2563EB;
+}
+body.a11y-dm .site-header {
+  background: rgba(10, 25, 47, 0.96);
+  border-bottom-color: rgba(147, 197, 253, 0.16);
+}
+body.a11y-dm .dropdown-panel,
+body.a11y-dm .mob-drawer,
+body.a11y-dm .a11y-panel {
+  background: #102442;
+  border-color: rgba(147, 197, 253, 0.2);
+}
+body.a11y-dm input,
+body.a11y-dm select,
+body.a11y-dm textarea {
+  background: #0A192F;
+  color: #F8FAFC;
+  border-color: rgba(147, 197, 253, 0.25);
+}
+
+/* Dyslexia-Friendly Readable Spacing & Font */
+body.a11y-dy,
+body.a11y-dy * {
+  font-family: Verdana, Arial, Tahoma, sans-serif !important;
+  letter-spacing: 0.045em !important;
+  word-spacing: 0.12em !important;
+}
+
+/* Increased Line Spacing */
+body.a11y-ls p,
+body.a11y-ls li,
+body.a11y-ls dd,
+body.a11y-ls blockquote {
+  line-height: 2.15 !important;
+  letter-spacing: 0.025em !important;
+}
+
+/* Reading Guide Overlay */
+.reading-guide {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 46px;
+  top: 0;
+  background: rgba(0, 90, 224, 0.14);
+  border-top: 2px solid rgba(0, 90, 224, 0.55);
+  border-bottom: 2px solid rgba(0, 90, 224, 0.55);
+  pointer-events: none;
+  z-index: 850;
+  display: none;
+  transform: translateY(-100px);
+}
+body.a11y-rg .reading-guide {
+  display: block;
+}
+
+/* Reduced Motion (both OS preference and manual toggle) */
+body.a11y-rm *,
+body.a11y-rm *::before,
+body.a11y-rm *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
