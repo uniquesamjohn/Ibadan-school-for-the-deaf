@@ -36,7 +36,7 @@ A modern, responsive, accessible static website redesign for **Ibadan School for
 ├── news-and-events/
 │   ├── index.html                       # News & Events hub
 │   ├── achievements.html                # Verified milestones & alumni excellence
-│   ├── gallery.html                     # 18-photo filterable archive + keyboard lightbox
+│   ├── gallery.html                     # 104-photo filterable gallery (86 live campus + 18 archive) + progressive Load More & lightbox
 │   ├── news.html                        # Parent awareness guide & institutional essays
 │   └── events.html                      # Historical events & upcoming schedule notice
 ├── careers/
@@ -55,7 +55,7 @@ A modern, responsive, accessible static website redesign for **Ibadan School for
 │   ├── js/
 │   │   ├── site-shell.js                # Reusable header, dropdowns, mobile drawer, footer, a11y FAB
 │   │   └── main.js                      # Dropdown/drawer keyboard nav, a11y preferences, lightbox, carousel, FAQ, form validation
-│   └── images/                          # Official school logo (logo.png) + 19 cropped archival photographs
+│   └── images/                          # Official logo.png, 19 archival photos, and gallery/ (86 optimised live campus JPEGs)
 ├── CONTENT-VERIFICATION-CHECKLIST.md    # Verified vs. excluded vs. pending confirmation audit
 ├── PENDING-INTEGRATIONS.md              # Required future backend, payment, CMS & media integrations
 └── README.md                            # This file

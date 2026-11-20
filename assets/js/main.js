@@ -4,7 +4,7 @@
  * scroll reveals, gallery filters + keyboard lightbox, testimonials carousel,
  * FAQ accordions, and honest client-side form validation.
  */
-document.addEventListener('DOMContentLoaded', () => {
+function bootApp() {
   'use strict';
 
   document.documentElement.classList.add('js-ready');
@@ -17,7 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initCarousel();
   initAccordions();
   initValidatedForms();
-});
+  initCopyButtons();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', bootApp);
+} else {
+  bootApp();
+}
 
 /* ==========================================================================
    1. STICKY HEADER & ACCESSIBLE DESKTOP DROPDOWNS
@@ -25,13 +32,28 @@ document.addEventListener('DOMContentLoaded', () => {
 function initHeaderAndDropdowns() {
   const header = document.getElementById('site-header');
   const dropdownItems = Array.from(document.querySelectorAll('.nav-item.has-dropdown'));
+  const closeTimers = new WeakMap();
+
+  const clearTimer = (item) => {
+    const id = closeTimers.get(item);
+    if (id) {
+      clearTimeout(id);
+      closeTimers.delete(item);
+    }
+  };
+
+  const setItemOpen = (item, open, pinned = false) => {
+    clearTimer(item);
+    item.classList.toggle('is-open', open);
+    item.dataset.pinned = open && pinned ? 'true' : 'false';
+    const btn = item.querySelector('.nav-dropdown-btn');
+    if (btn) btn.setAttribute('aria-expanded', String(open));
+  };
 
   const closeAllDropdowns = (exceptItem = null) => {
     dropdownItems.forEach((item) => {
       if (item === exceptItem) return;
-      item.classList.remove('is-open');
-      const btn = item.querySelector('.nav-dropdown-btn');
-      if (btn) btn.setAttribute('aria-expanded', 'false');
+      setItemOpen(item, false, false);
     });
   };
 
@@ -40,21 +62,57 @@ function initHeaderAndDropdowns() {
     const menuLinks = Array.from(item.querySelectorAll('.dropdown-link'));
     if (!btn) return;
 
+    // Mouse hover open with invisible bridge + 150ms leave grace delay
+    item.addEventListener('pointerenter', (event) => {
+      if (event.pointerType !== 'mouse') return;
+      clearTimer(item);
+      if (!item.classList.contains('is-open')) {
+        closeAllDropdowns(item);
+        setItemOpen(item, true, false);
+      }
+    });
+
+    item.addEventListener('pointerleave', (event) => {
+      if (event.pointerType !== 'mouse') return;
+      if (item.dataset.pinned === 'true') return;
+      clearTimer(item);
+      const timerId = setTimeout(() => {
+        if (item.dataset.pinned !== 'true') {
+          setItemOpen(item, false, false);
+        }
+      }, 150);
+      closeTimers.set(item, timerId);
+    });
+
+    // Click / tap / keyboard activation cleanly toggles or pins open
     btn.addEventListener('click', (event) => {
+      event.preventDefault();
       event.stopPropagation();
-      const willOpen = !item.classList.contains('is-open');
-      closeAllDropdowns(item);
-      item.classList.toggle('is-open', willOpen);
-      btn.setAttribute('aria-expanded', String(willOpen));
+      const isOpen = item.classList.contains('is-open');
+      const isPinned = item.dataset.pinned === 'true';
+
+      if (isOpen && isPinned) {
+        setItemOpen(item, false, false);
+      } else if (isOpen && !isPinned) {
+        // Opened by hover, user clicked it -> keep it open if pointer, or toggle cleanly
+        setItemOpen(item, true, true);
+      } else {
+        closeAllDropdowns(item);
+        setItemOpen(item, true, true);
+      }
     });
 
     btn.addEventListener('keydown', (event) => {
       if (event.key === 'ArrowDown') {
         event.preventDefault();
         closeAllDropdowns(item);
-        item.classList.add('is-open');
-        btn.setAttribute('aria-expanded', 'true');
+        setItemOpen(item, true, true);
         if (menuLinks[0]) menuLinks[0].focus();
+      } else if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        closeAllDropdowns(item);
+        setItemOpen(item, true, true);
+        if (menuLinks[menuLinks.length - 1]) menuLinks[menuLinks.length - 1].focus();
       } else if (event.key === 'Escape') {
         closeAllDropdowns();
         btn.focus();
@@ -75,6 +133,13 @@ function initHeaderAndDropdowns() {
           menuLinks[(idx - 1 + menuLinks.length) % menuLinks.length].focus();
         }
       });
+    });
+
+    // Close when keyboard focus leaves the dropdown item completely
+    item.addEventListener('focusout', (event) => {
+      if (!event.relatedTarget || !item.contains(event.relatedTarget)) {
+        setItemOpen(item, false, false);
+      }
     });
   });
 
@@ -103,30 +168,56 @@ function initHeaderAndDropdowns() {
    2. MOBILE DRAWER & SUBMENU ACCORDIONS
    ========================================================================== */
 function initMobileNavigation() {
+  const header = document.getElementById('site-header');
   const toggleBtn = document.getElementById('menu-toggle');
   const drawer = document.getElementById('mob-drawer');
   if (!toggleBtn || !drawer) return;
+
+  const setSubOpen = (subBtn, open) => {
+    const targetId = subBtn.getAttribute('aria-controls');
+    const panel = targetId ? document.getElementById(targetId) : null;
+    if (!panel) return;
+    subBtn.setAttribute('aria-expanded', String(open));
+    panel.hidden = !open;
+    panel.classList.toggle('is-open', open);
+  };
 
   const setOpen = (open) => {
     toggleBtn.setAttribute('aria-expanded', String(open));
     toggleBtn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
     drawer.classList.toggle('is-open', open);
     drawer.hidden = !open;
+
+    if (open) {
+      // Auto-expand submenu containing the active page for clarity
+      drawer.querySelectorAll('.mob-sub-toggle').forEach((subBtn) => {
+        const targetId = subBtn.getAttribute('aria-controls');
+        const panel = targetId ? document.getElementById(targetId) : null;
+        if (panel && panel.querySelector('[aria-current="page"]')) {
+          setSubOpen(subBtn, true);
+        }
+      });
+    }
   };
 
-  toggleBtn.addEventListener('click', () => {
+  toggleBtn.addEventListener('click', (event) => {
+    event.stopPropagation();
     setOpen(drawer.hidden);
   });
 
   drawer.querySelectorAll('.mob-sub-toggle').forEach((subBtn) => {
-    subBtn.addEventListener('click', () => {
-      const targetId = subBtn.getAttribute('aria-controls');
-      const panel = targetId ? document.getElementById(targetId) : null;
-      if (!panel) return;
+    subBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
       const expanded = subBtn.getAttribute('aria-expanded') === 'true';
-      subBtn.setAttribute('aria-expanded', String(!expanded));
-      panel.classList.toggle('is-open', !expanded);
+      setSubOpen(subBtn, !expanded);
     });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!drawer.hidden && header && !header.contains(event.target)) {
+      setOpen(false);
+    }
   });
 
   document.addEventListener('keydown', (event) => {
@@ -305,20 +396,79 @@ function initScrollUtilities() {
    ========================================================================== */
 function initGalleryAndLightbox() {
   const filterBtns = Array.from(document.querySelectorAll('[data-gallery-filter]'));
+  const galleryGrid = document.querySelector('[data-gallery-grid]');
   const cards = Array.from(document.querySelectorAll('.gallery-card'));
   const triggers = Array.from(document.querySelectorAll('[data-lightbox-src]'));
+  const loadMoreBtn = document.getElementById('gallery-load-more');
+  const showAllBtn = document.getElementById('gallery-show-all');
+  const loadWrap = loadMoreBtn ? loadMoreBtn.closest('.gallery-load-wrap') : null;
+  const countEl = document.getElementById('gallery-count');
+
+  const pageSize = galleryGrid && galleryGrid.dataset.pageSize
+    ? parseInt(galleryGrid.dataset.pageSize, 10)
+    : 0;
+
+  let activeCategory = 'all';
+  let visibleLimit = pageSize > 0 ? pageSize : cards.length;
+
+  function applyGalleryView() {
+    if (!cards.length) return;
+    const matched = cards.filter((card) => (
+      activeCategory === 'all' || card.dataset.category === activeCategory
+    ));
+    const shownCount = pageSize > 0 ? Math.min(visibleLimit, matched.length) : matched.length;
+    const shownSet = new Set(matched.slice(0, shownCount));
+
+    cards.forEach((card) => {
+      card.hidden = !shownSet.has(card);
+    });
+
+    if (countEl) {
+      countEl.textContent = `Showing ${shownCount} of ${matched.length} photographs`;
+    }
+    const remaining = matched.length - shownCount;
+    if (loadMoreBtn) {
+      loadMoreBtn.hidden = remaining <= 0;
+      if (remaining > 0) {
+        const nextBatch = Math.min(pageSize || remaining, remaining);
+        loadMoreBtn.textContent = `Load ${nextBatch} More Photos (${remaining} remaining)`;
+      }
+    }
+    if (showAllBtn) {
+      showAllBtn.hidden = remaining <= 0;
+    }
+    if (loadWrap) {
+      loadWrap.hidden = remaining <= 0;
+    }
+  }
 
   if (filterBtns.length && cards.length) {
     filterBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
-        const category = btn.dataset.galleryFilter;
+        activeCategory = btn.dataset.galleryFilter || 'all';
+        visibleLimit = pageSize > 0 ? pageSize : cards.length;
         filterBtns.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
-        cards.forEach((card) => {
-          const matches = category === 'all' || card.dataset.category === category;
-          card.hidden = !matches;
-        });
+        applyGalleryView();
       });
     });
+  }
+
+  if (loadMoreBtn && pageSize > 0) {
+    loadMoreBtn.addEventListener('click', () => {
+      visibleLimit += pageSize;
+      applyGalleryView();
+    });
+  }
+
+  if (showAllBtn && pageSize > 0) {
+    showAllBtn.addEventListener('click', () => {
+      visibleLimit = cards.length;
+      applyGalleryView();
+    });
+  }
+
+  if (pageSize > 0) {
+    applyGalleryView();
   }
 
   if (!triggers.length) return;
@@ -539,6 +689,66 @@ function initValidatedForms() {
             <a class="btn btn-primary btn-sm" href="${mailtoHref}">Open Pre-Filled Email Draft</a>
           </p>`;
         feedback.focus();
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   9. ACCESSIBLE ONE-CLICK COPY BUTTONS (Bank Account Numbers)
+   ========================================================================== */
+function initCopyButtons() {
+  const buttons = document.querySelectorAll('[data-copy-value]');
+  if (!buttons.length) return;
+
+  const fallbackCopy = (text) => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try {
+      ok = document.execCommand('copy');
+    } catch {
+      ok = false;
+    }
+    document.body.removeChild(ta);
+    return ok;
+  };
+
+  buttons.forEach((btn) => {
+    const origLabel = btn.textContent.trim();
+    const statusId = btn.dataset.copyStatus;
+    const statusEl = statusId ? document.getElementById(statusId) : null;
+    let resetTimer = null;
+
+    const announce = (copied, value) => {
+      if (resetTimer) clearTimeout(resetTimer);
+      if (copied) {
+        btn.textContent = 'Account Number Copied';
+        if (statusEl) statusEl.textContent = `Account number ${value} copied to clipboard.`;
+      } else if (statusEl) {
+        statusEl.textContent = `Please copy manually: ${value}`;
+      }
+      resetTimer = setTimeout(() => {
+        btn.textContent = origLabel;
+        if (statusEl) statusEl.textContent = '';
+      }, 3000);
+    };
+
+    btn.addEventListener('click', () => {
+      const value = btn.dataset.copyValue || '';
+      if (!value) return;
+
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+        navigator.clipboard.writeText(value)
+          .then(() => announce(true, value))
+          .catch(() => announce(fallbackCopy(value), value));
+      } else {
+        announce(fallbackCopy(value), value);
       }
     });
   });

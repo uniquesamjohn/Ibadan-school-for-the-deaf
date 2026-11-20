@@ -139,14 +139,15 @@
   transition: transform var(--t-fast);
   flex-shrink: 0;
 }
-.nav-dropdown-btn[aria-expanded="true"] .nav-caret {
+.nav-dropdown-btn[aria-expanded="true"] .nav-caret,
+.mob-sub-toggle[aria-expanded="true"] .nav-caret {
   transform: rotate(180deg);
 }
 
-/* Desktop Dropdown Panel */
+/* Desktop Dropdown Panel (JS-managed .is-open prevents hover/focus-within conflicts) */
 .dropdown-panel {
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 4px);
   left: 0;
   min-width: 230px;
   background: var(--white);
@@ -156,22 +157,25 @@
   padding: 0.45rem;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(8px);
+  pointer-events: none;
+  transform: translateY(6px);
   transition: opacity var(--t-fast), transform var(--t-fast), visibility var(--t-fast);
   z-index: var(--z-dropdown);
 }
-.nav-item.is-open > .dropdown-panel,
-.nav-item:focus-within > .dropdown-panel {
+/* Invisible hover bridge covering the 4px gap between nav button and panel */
+.dropdown-panel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -12px;
+  height: 12px;
+}
+.nav-item.is-open > .dropdown-panel {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: translateY(0);
-}
-@media (hover: hover) {
-  .nav-item:hover > .dropdown-panel {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
 }
 
 .dropdown-link {
@@ -308,17 +312,15 @@
 }
 .mob-nav-link[aria-current="page"],
 .mob-nav-link:hover,
-.mob-sub-toggle:hover {
+.mob-sub-toggle:hover,
+.mob-sub-toggle[aria-expanded="true"] {
   color: var(--primary-blue);
 }
 .mob-sub-list {
-  display: none;
+  display: block;
   padding: 0.25rem 0 0.5rem 1rem;
   background: var(--blue-surface);
   border-bottom: 1px solid var(--border);
-}
-.mob-sub-list.is-open {
-  display: block;
 }
 .mob-sub-list a {
   display: flex;
@@ -1128,6 +1130,26 @@
   margin-top: 0.2rem;
 }
 
+.gallery-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.gallery-count {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.gallery-load-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 2.25rem;
+}
+
 /* Lightbox Modal */
 .lightbox {
   position: fixed;
@@ -1369,11 +1391,123 @@ body.a11y-dm .testi-name { color: #FFFFFF; }
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+/* Official Bank Transfer Card (Donate page & Homepage Support section) */
+.bank-card {
+  background: var(--white);
+  color: var(--text-main);
+  border: 1px solid var(--border-strong);
+  border-top: 5px solid var(--primary-blue);
+  border-radius: var(--radius-md);
+  padding: 1.85rem;
+  box-shadow: var(--shadow-lg);
+  max-width: 560px;
+  margin: 0 auto 2rem;
+  text-align: left;
+}
+.bank-card-full {
+  max-width: none;
+  margin: 0;
+}
+.bank-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+.bank-card h3 {
+  font-size: 1.25rem;
+  color: var(--dark-blue);
+  margin: 0;
+}
+body.a11y-dm .bank-card h3 {
+  color: #FFFFFF;
+}
+.bank-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+.bank-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.bank-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-subtle);
+}
+.bank-value {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+.bank-account-num {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--primary-blue);
+}
+body.a11y-dm .bank-account-num {
+  color: var(--blue-sky);
+}
+.bank-copy-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+.bank-copy-status {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--status-ok);
+  min-height: 1.2em;
+}
+body.a11y-dm .bank-copy-status {
+  color: var(--blue-sky);
+}
+.bank-note {
+  margin-top: 1.15rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.bank-note a {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+body.a11y-dm .bank-note a {
+  color: var(--blue-sky);
+}
+body.a11y-hc .bank-card {
+  background: #0A0A0A !important;
+  border: 2px solid #FFE600 !important;
+  color: #FFFFFF !important;
+}
+body.a11y-hc .bank-card h3,
+body.a11y-hc .bank-value,
+body.a11y-hc .bank-account-num,
+body.a11y-hc .bank-note {
+  color: #FFFFFF !important;
+}
 @media (max-width: 900px) {
   .needs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 560px) {
   .needs-grid { grid-template-columns: 1fr; }
+  .bank-card { padding: 1.35rem; }
+  .bank-account-num { font-size: 1.32rem; }
 }
 
 /* ==========================================================================
@@ -1436,6 +1570,117 @@ body.a11y-dm .testi-name { color: #FFFFFF; }
   letter-spacing: 0.06em;
   color: var(--primary-blue);
   margin-bottom: 0.7rem;
+}
+
+/* Horizontal Split Founder Cards (square portrait left, biography right; stacks on mobile) */
+.team-card-horizontal {
+  display: grid;
+  grid-template-columns: 225px minmax(0, 1fr);
+  align-items: stretch;
+}
+.team-card-horizontal .team-photo-box {
+  height: 100%;
+  min-height: 245px;
+  background: #EDEAE2;
+}
+.team-card-horizontal .team-photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.team-card-horizontal .team-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem 1.6rem;
+}
+@media (max-width: 1080px) {
+  .team-card-horizontal {
+    grid-template-columns: 1fr;
+  }
+  .team-card-horizontal .team-photo-box {
+    height: 300px;
+    min-height: 0;
+  }
+  .team-card-horizontal .team-photo-box img {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+/* Portrait Leadership Team Cards (Chairman, Matron) */
+.leader-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 760px;
+  margin: 0 auto 3rem;
+}
+.leader-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: transform var(--t-base), box-shadow var(--t-base);
+}
+.leader-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+.leader-photo-box {
+  height: 360px;
+  background: var(--light-blue);
+  overflow: hidden;
+}
+.leader-photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.45s var(--ease);
+}
+.leader-card:hover .leader-photo-box img {
+  transform: scale(1.03);
+}
+.leader-body {
+  padding: 1.55rem 1.4rem 1.75rem;
+}
+.leader-title {
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  margin-bottom: 0.45rem;
+}
+body.a11y-dm .leader-title {
+  color: var(--blue-sky);
+}
+.leader-dept {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+.leader-group {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+body.a11y-hc .leader-card {
+  background: #0A0A0A !important;
+  border: 2px solid #FFE600 !important;
+}
+@media (max-width: 680px) {
+  .leader-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+  }
+  .leader-photo-box {
+    height: 340px;
+  }
 }
 .partner-cat {
   font-size: 0.74rem;

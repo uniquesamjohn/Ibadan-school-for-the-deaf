@@ -127,7 +127,7 @@
             <span>About Us</span>
             ${chevronSvg}
           </button>
-          <div class="mob-sub-list" id="mob-about">
+          <div class="mob-sub-list" id="mob-about" hidden>
             <a href="${href('about/who-we-are.html')}"${isCurrent('who-we-are')}>Who We Are</a>
             <a href="${href('about/our-people-and-team.html')}"${isCurrent('our-people-and-team')}>Our People and Team</a>
             <a href="${href('about/our-partner.html')}"${isCurrent('our-partner')}>Our Partner</a>
@@ -140,7 +140,7 @@
             <span>News and Events</span>
             ${chevronSvg}
           </button>
-          <div class="mob-sub-list" id="mob-news">
+          <div class="mob-sub-list" id="mob-news" hidden>
             <a href="${href('news-and-events/index.html')}"${isCurrent('news-and-events')}>Overview</a>
             <a href="${href('news-and-events/achievements.html')}"${isCurrent('achievements')}>Achievements</a>
             <a href="${href('news-and-events/gallery.html')}"${isCurrent('gallery')}>Gallery</a>
@@ -261,13 +261,13 @@
   const footerHost = document.getElementById('site-footer-mount');
 
   if (headerHost) {
-    headerHost.innerHTML = headerMarkup;
+    headerHost.outerHTML = headerMarkup;
   } else {
     body.insertAdjacentHTML('afterbegin', headerMarkup);
   }
 
   if (footerHost) {
-    footerHost.innerHTML = footerMarkup;
+    footerHost.outerHTML = footerMarkup;
   } else {
     body.insertAdjacentHTML('beforeend', footerMarkup);
   }

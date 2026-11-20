@@ -11,7 +11,9 @@ This audit separates **verified source content**, **questionable legacy-website 
 | `https://ibadanschoolforthedeaf.com.ng/` (Homepage HTML) | **Verified Live** | Retrieved full HTML (`42,153` bytes): contact info, vision statement, learning pathways, campus life pillars, image paths. |
 | `https://ibadanschoolforthedeaf.com.ng/css/style.css` | **Verified Live** | Retrieved full stylesheet (`12,090` bytes): extracted exact HEX tokens (`#005AE0`, `#0A192F`, `#E8F0FE`, `#2563EB`, `#FFFFFF`, `#F8FAFC`, `#1E293B`, `#64748B`) and `'Outfit'` font. |
 | `https://ibadanschoolforthedeaf.com.ng/images/logo.png` | **Verified & Installed** | Retrieved untouched official circular seal PNG (`1080×1072`, `619 KB`) and installed at `assets/images/logo.png`, masked cleanly with CSS `border-radius: 50%` across header, footer, and favicons. |
-| `https://ibadanschoolforthedeaf.com.ng/*.php` (Internal pages) | **Gated** | Server returned LiteSpeed Altcha bot verification. Per strict policy, no anti-bot bypass was attempted. Recent campus photos should be supplied directly by the school. |
+| `https://ibadanschoolforthedeaf.com.ng/gallery.php` (86 Campus Photos) | **Verified & Imported** | Extracted all 86 live campus PNG photographs (`258.45 MB` raw) and optimised them into web-ready JPEGs (`10.57 MB` total) in `assets/images/gallery/`, integrated into `news-and-events/gallery.html`, Homepage, Programs, and Co-Founder profile. |
+| `https://ibadanschoolforthedeaf.com.ng/leadership.php` | **Verified Live** | Confirmed official Leadership Team roles (**Chairman — Board of Directors** using user-supplied studio portrait `assets/images/chairman-portrait.jpg` and **Matron — Welfare & Care** via `campus-67.jpg`) alongside the Co-Founders, integrated into `about/our-people-and-team.html`. |
+| `https://ibadanschoolforthedeaf.com.ng/*.php` (Other internal pages) | **Gated** | Server returned LiteSpeed Altcha bot verification on earlier bulk crawl. Per strict policy, no anti-bot bypass was attempted. |
 | `https://ajofaspecialeducation.com/` (HTML, `main.css`, `components.css`, `page-shell.js`) | **Verified Live** | Used strictly for visual layout, typography pairing, section rhythm, and accessibility-toolbar inspiration. Zero Ajofa text, colours, logos, bank accounts, or photos were copied. |
 | Uploaded School Archive `.docx` Files & `Website Design.docx` | **Verified Locally** | Extracted full historical texts, 19 authentic archival photographs (cropped and optimised in `assets/images/`), and exact site navigation hierarchy. |
 
@@ -31,7 +33,7 @@ This audit separates **verified source content**, **questionable legacy-website 
 - [x] **Verified Alumni & Board Testimonials**: Mr. Bamidele Wasiu Raji (Lecturer, FCE Special Oyo), Mr. Tunwase Adedeji Dele (1975 Set), Mr. J.A. Gbegbin (Board Secretary, Archive), and Rot. Jare Oyesola (Board Chairman, 50th Anniversary Archive).
 - [x] **Verified Historic Partners & Past Donors**: Oyo State Government, Federal Government of Nigeria, Anglican Diocese of Ibadan, World Council of Churches, Rotary Clubs (Ibadan, Eleyele, Agodi, District 9130), Commonwealth Society for the Deaf (Britain), Netherlands Children Used Stamps Group, University of Ibadan Dept. of Special Education, YWCA/YMCA, and documented faith/community donors.
 - [x] **Verified Priority Support Needs**: Documented from the school's 50th Anniversary Planning Committee appeal.
-- [x] **Authentic Photographs**: 19 cropped archival photographs from the uploaded school document in `assets/images/`.
+- [x] **Campus & Archival Photographs**: 86 optimised live campus photographs from `gallery.php` in `assets/images/gallery/` plus 19 cropped historical archival photographs from the uploaded school archive in `assets/images/`.
 
 ---
 
@@ -61,4 +63,4 @@ The following items appeared on the old live website or OCR scan but were **excl
 - [ ] **Official News Releases & Upcoming Calendar (`news-and-events/news.html`, `events.html`)**: Supply dated current-term announcements, PTA dates, open days, and celebrations.
 - [ ] **Current Job Vacancies (`careers/index.html`)**: Confirm if any open roles or Oyo State TESCOM/SUBEB recruitment notices should be listed.
 - [ ] **Official Social Media Accounts (`contact/index.html` & Footer)**: Confirm official Facebook, Instagram, YouTube, or WhatsApp URLs if maintained by the school.
-- [ ] **Official Donation Account / Payment Details (`donate/index.html`)**: Provide verified institutional bank account details or authorized payment gateway account before enabling online giving.
+- [x] **Official Donation Bank Account (`donate/index.html` & `index.html`)**: Wema Bank — Account Name: `Ibadan School for the Deaf` — Account Number: `0120628463` (direct bank transfer active; optional online card gateway checkout remains pending).

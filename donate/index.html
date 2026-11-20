@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -37,17 +37,13 @@
       </div>
     </section>
 
-    <!-- Pending Integration Notice (Strict Integrity Requirement) -->
+    <!-- Official Bank Transfer Details & Donation Overview -->
     <section class="section section-white" aria-labelledby="donation-status-heading">
       <div class="container">
-        <div class="notice-box notice-box-warn reveal" role="note" style="max-width:920px;margin:0 auto 2.5rem;">
-          <h2 id="donation-status-heading" style="font-size:1.1rem;font-family:var(--font-body);">Online Payment Gateway
-            &amp; Official Bank Details &mdash; Pending Verification</h2>
+        <div class="notice-box reveal" role="note" style="max-width:920px;margin:0 auto 2.5rem;">
+          <h2 id="donation-status-heading" style="font-size:1.05rem;font-family:var(--font-body);">Direct Bank Transfer Active &mdash; Online Card Checkout Pending</h2>
           <p>
-            No online payment processor or verified school bank account details are currently published on this static
-            website. To ensure donor security, we never display unverified account numbers or simulate payments. Please
-            contact Ibadan School for the Deaf directly using the verified official channels below before making any
-            financial or material contribution.
+            You can support Ibadan School for the Deaf directly via bank transfer using the official <strong>Wema Bank</strong> account details below. Automated online card checkout (Paystack/Flutterwave) is not yet enabled on this static website.
           </p>
         </div>
 
@@ -66,27 +62,55 @@
               both through financial sponsorship of indigent students and through direct infrastructure or equipment
               donations.
             </p>
-          </div>
 
-          <div class="reveal">
-            <div class="info-box">
-              <h3>Verified Official Channels to Coordinate Donations</h3>
+            <div class="info-box mt-2">
+              <h3>Official Contacts for Receipts &amp; In-Kind Donations</h3>
               <ul>
-                <li><strong>Telephone:</strong> <a href="tel:+2348035851464">08035851464</a>, <a
-                    href="tel:+2348060060642">+234-806-006-0642</a></li>
-                <li><strong>Email:</strong> <a
-                    href="mailto:ibadanschoolforthedeaf@gmail.com">ibadanschoolforthedeaf@gmail.com</a>, <a
-                    href="mailto:info@ibadanschoolforthedeaf.com.ng">info@ibadanschoolforthedeaf.com.ng</a></li>
+                <li><strong>Telephone:</strong> <a href="tel:+2348035851464">08035851464</a>, <a href="tel:+2348060060642">+234-806-006-0642</a></li>
+                <li><strong>Email:</strong> <a href="mailto:ibadanschoolforthedeaf@gmail.com">ibadanschoolforthedeaf@gmail.com</a>, <a href="mailto:info@ibadanschoolforthedeaf.com.ng">info@ibadanschoolforthedeaf.com.ng</a></li>
                 <li><strong>Campus Office:</strong> Polytechnic Road, Ijokodo Junction, Ibadan, Oyo State, Nigeria</li>
                 <li><strong>Postal Address:</strong> P.O. Box 1965, Dugbe, Ibadan</li>
               </ul>
               <div class="mt-2" style="display:flex;gap:0.75rem;flex-wrap:wrap;">
-                <a class="btn btn-primary"
-                  href="mailto:ibadanschoolforthedeaf@gmail.com?subject=Donation%20%26%20Support%20Enquiry%20%E2%80%94%20Ibadan%20School%20for%20the%20Deaf">Email
-                  Donation Enquiry</a>
+                <a class="btn btn-primary" href="mailto:ibadanschoolforthedeaf@gmail.com?subject=Donation%20%26%20Support%20Enquiry%20%E2%80%94%20Ibadan%20School%20for%20the%20Deaf">Email Donation Confirmation</a>
                 <a class="btn btn-outline-primary" href="../contact/index.html">Contact Us Page</a>
               </div>
             </div>
+          </div>
+
+          <div class="reveal">
+            <article class="bank-card bank-card-full" aria-labelledby="bank-card-heading">
+              <div class="bank-card-header">
+                <h3 id="bank-card-heading">Official Bank Transfer Details</h3>
+                <span class="badge badge-blue">Verified Account</span>
+              </div>
+
+              <dl class="bank-details-list">
+                <div class="bank-row">
+                  <dt class="bank-label">Bank</dt>
+                  <dd class="bank-value">Wema Bank</dd>
+                </div>
+                <div class="bank-row">
+                  <dt class="bank-label">Account Name</dt>
+                  <dd class="bank-value">Ibadan School for the Deaf</dd>
+                </div>
+                <div class="bank-row">
+                  <dt class="bank-label">Account Number</dt>
+                  <dd class="bank-account-num" id="donate-acct-num">0120628463</dd>
+                </div>
+              </dl>
+
+              <div class="bank-copy-row">
+                <button type="button" class="btn btn-primary" data-copy-value="0120628463" data-copy-status="donate-copy-status">
+                  Copy Account Number
+                </button>
+                <span class="bank-copy-status" id="donate-copy-status" role="status" aria-live="polite"></span>
+              </div>
+
+              <p class="bank-note">
+                After making a transfer &mdash; or to coordinate an official receipt, student sponsorship, or in-kind material donation &mdash; please email <a href="mailto:ibadanschoolforthedeaf@gmail.com">ibadanschoolforthedeaf@gmail.com</a> / <a href="mailto:info@ibadanschoolforthedeaf.com.ng">info@ibadanschoolforthedeaf.com.ng</a> or call <a href="tel:+2348035851464">08035851464</a> / <a href="tel:+2348060060642">+234-806-006-0642</a>.
+              </p>
+            </article>
           </div>
         </div>
       </div>

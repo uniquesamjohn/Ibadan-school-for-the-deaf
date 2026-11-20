@@ -24,10 +24,9 @@ Because this website is built strictly with **HTML5**, **CSS3**, and **Vanilla J
 
 ## 3. Donation & Online Payment Processing (`donate/index.html`)
 
-- **Current Frontend Behaviour**: Displays verified institutional priority needs and directs prospective donors to verify official channels via phone (`08035851464`) or email (`ibadanschoolforthedeaf@gmail.com`). **No bank account details or payment links are fabricated.**
-- **Required Integration**:
-  - Verified official school bank account details approved in writing by the Board of Governors / School Management.
-  - Optional Nigerian payment gateway integration (**Paystack** or **Flutterwave**) with server-side webhook verification and automated donor receipts.
+- **Current Frontend Behaviour**: Displays verified institutional priority needs and the school's official **Wema Bank** account (`Account Number: 0120628463`, `Account Name: Ibadan School for the Deaf`) with an accessible one-click copy button, alongside official phone (`08035851464`, `+234-806-006-0642`) and email (`ibadanschoolforthedeaf@gmail.com`, `info@ibadanschoolforthedeaf.com.ng`) channels for donation receipts and in-kind support.
+- **Required Future Integration (Optional)**:
+  - Automated online card/checkout gateway integration (**Paystack** or **Flutterwave**) with server-side webhook verification and automated donor receipts if the school chooses to accept online card payments in addition to direct bank transfers.
 
 ---
 

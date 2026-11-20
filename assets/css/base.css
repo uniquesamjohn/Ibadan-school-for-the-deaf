@@ -22,7 +22,7 @@ body {
   background-color: var(--off-white);
   color: var(--text-main);
   line-height: var(--lh-body);
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
   -webkit-font-smoothing: antialiased;
 }
@@ -51,6 +51,11 @@ button, input, select, textarea {
 
 button {
   cursor: pointer;
+}
+
+/* Ensure the HTML hidden attribute always overrides author display rules (flex/grid/inline-flex) */
+[hidden] {
+  display: none !important;
 }
 
 /* ── Accessible Skip Link ── */

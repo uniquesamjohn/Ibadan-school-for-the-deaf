@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery — Ibadan School for the Deaf</title>
-  <meta name="description" content="Accessible photographic archive of classrooms, audiology training, campus heritage, sports, cultural performances, and historic visits at Ibadan School for the Deaf.">
+  <meta name="description" content="Explore 104 authentic photographs from Ibadan School for the Deaf — 86 modern campus photos and 18 historical anniversary archive photographs with keyboard-accessible lightbox.">
   <link rel="icon" type="image/png" href="../assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,227 +29,1180 @@
           <span aria-current="page">Gallery</span>
         </nav>
         <h1 id="page-title">Photo &amp; Heritage Gallery</h1>
-        <p>Authentic photographs preserved from the Ibadan School for the Deaf archive. Select any image to view it full-size with keyboard navigation (Arrow keys and Escape).</p>
+        <p>104 authentic photographs from Ibadan School for the Deaf &mdash; 86 modern campus photographs alongside 18 historical anniversary archive images. Select any photo for a keyboard-accessible preview.</p>
       </div>
     </section>
 
     <section class="section section-white" aria-labelledby="photo-gallery-heading">
       <div class="container">
-        <h2 class="sr-only" id="photo-gallery-heading">Filterable Photograph Archive</h2>
+        <h2 class="sr-only" id="photo-gallery-heading">Filterable School Photo Gallery</h2>
 
-        <div class="filter-bar" role="group" aria-label="Filter gallery by category">
-          <button type="button" class="filter-btn" data-gallery-filter="all" aria-pressed="true">All Photos (18)</button>
-          <button type="button" class="filter-btn" data-gallery-filter="classroom" aria-pressed="false">Classroom &amp; Audiology</button>
-          <button type="button" class="filter-btn" data-gallery-filter="campus" aria-pressed="false">Campus &amp; Heritage</button>
-          <button type="button" class="filter-btn" data-gallery-filter="sports" aria-pressed="false">Sports &amp; Culture</button>
-          <button type="button" class="filter-btn" data-gallery-filter="visits" aria-pressed="false">Historic Visits</button>
+        <div class="filter-bar" role="group" aria-label="Filter gallery by collection">
+          <button type="button" class="filter-btn" data-gallery-filter="all" aria-pressed="true">All Photos (104)</button>
+          <button type="button" class="filter-btn" data-gallery-filter="campus-live" aria-pressed="false">Campus Gallery (86)</button>
+          <button type="button" class="filter-btn" data-gallery-filter="archive" aria-pressed="false">Historical Archive (18)</button>
         </div>
 
-        <div class="gallery-grid">
-          <figure class="gallery-card" data-category="classroom">
+        <div class="gallery-status-bar">
+          <p class="gallery-count" id="gallery-count" role="status" aria-live="polite">Showing 24 of 104 photographs</p>
+        </div>
+
+        <div class="gallery-grid" data-gallery-grid data-page-size="24">
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-93.jpg"
+              data-lightbox-alt="Official colour portrait of Co-founders Late Chief (Mrs.) A.O. Oyesola and Late Chief J.O. Oyesola"
+              data-lightbox-caption="Official portrait of Co-founders Late Chief (Mrs.) A.O. Oyesola and Late Chief J.O. Oyesola.">
+              <img src="../assets/images/gallery/campus-93.jpg" alt="Official colour portrait of Co-founders Late Chief (Mrs.) A.O. Oyesola and Late Chief J.O. Oyesola" width="900" height="591" loading="eager" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Co-Founders Joint Portrait<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-94.jpg"
+              data-lightbox-alt="Official colour portrait of Late Chief (Mrs.) A.O. Oyesola, M.O.N., J.P., Iya Abiye of Ibadan"
+              data-lightbox-caption="Late Chief (Mrs.) A.O. Oyesola (M.O.N., J.P.), Iya Abiye of Ibadan — Founder, Ibadan School for the Deaf.">
+              <img src="../assets/images/gallery/campus-94.jpg" alt="Official colour portrait of Late Chief (Mrs.) A.O. Oyesola, M.O.N., J.P., Iya Abiye of Ibadan" width="900" height="900" loading="eager" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Founder Chief (Mrs.) A.O. Oyesola<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-95.jpg"
+              data-lightbox-alt="Official colour portrait of Late Chief J.O. Oyesola, Jaguna of Freeman Methodist Cathedral"
+              data-lightbox-caption="Late Chief J.O. Oyesola, Jaguna of Freeman Methodist Cathedral — Co-founder, Ibadan School for the Deaf.">
+              <img src="../assets/images/gallery/campus-95.jpg" alt="Official colour portrait of Late Chief J.O. Oyesola, Jaguna of Freeman Methodist Cathedral" width="900" height="900" loading="eager" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Co-Founder Chief J.O. Oyesola<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-69.jpg"
+              data-lightbox-alt="Portrait of the Chairman, Board of Directors, Ibadan School for the Deaf"
+              data-lightbox-caption="Chairman — Board of Directors, Leadership Team, Ibadan School for the Deaf.">
+              <img src="../assets/images/gallery/campus-69.jpg" alt="Portrait of the Chairman, Board of Directors, Ibadan School for the Deaf" width="768" height="1024" loading="eager" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Chairman &mdash; Board of Directors<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-67.jpg"
+              data-lightbox-alt="Portrait of the Matron, Welfare and Care, Ibadan School for the Deaf"
+              data-lightbox-caption="Matron — Welfare & Care, Leadership Team, Ibadan School for the Deaf.">
+              <img src="../assets/images/gallery/campus-67.jpg" alt="Portrait of the Matron, Welfare and Care, Ibadan School for the Deaf" width="909" height="1080" loading="eager" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Matron &mdash; Welfare &amp; Care<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-57.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #57"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #57.">
+              <img src="../assets/images/gallery/campus-57.jpg" alt="Ibadan School for the Deaf campus photograph #57" width="1080" height="809" loading="eager" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #57<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-73.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #73"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #73.">
+              <img src="../assets/images/gallery/campus-73.jpg" alt="Ibadan School for the Deaf campus photograph #73" width="1080" height="810" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #73<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-70.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #70"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #70.">
+              <img src="../assets/images/gallery/campus-70.jpg" alt="Ibadan School for the Deaf campus photograph #70" width="992" height="744" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #70<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-71.jpg"
+              data-lightbox-alt="Joyful pupils and teachers wearing festive headbands and signing together outdoors"
+              data-lightbox-caption="Students and staff sharing a festive campus celebration.">
+              <img src="../assets/images/gallery/campus-71.jpg" alt="Joyful pupils and teachers wearing festive headbands and signing together outdoors" width="992" height="744" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Festive School Celebration<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-72.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #72"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #72.">
+              <img src="../assets/images/gallery/campus-72.jpg" alt="Ibadan School for the Deaf campus photograph #72" width="1040" height="780" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #72<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-68.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #68"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #68.">
+              <img src="../assets/images/gallery/campus-68.jpg" alt="Ibadan School for the Deaf campus photograph #68" width="1040" height="780" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #68<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-65.jpg"
+              data-lightbox-alt="Smiling primary pupils in checkered uniforms holding gift supplies outside the hostel"
+              data-lightbox-caption="Primary boarding pupils in checkered uniforms celebrating community donations on campus.">
+              <img src="../assets/images/gallery/campus-65.jpg" alt="Smiling primary pupils in checkered uniforms holding gift supplies outside the hostel" width="1040" height="780" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Primary Boarding Pupils<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-63.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #63"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #63.">
+              <img src="../assets/images/gallery/campus-63.jpg" alt="Ibadan School for the Deaf campus photograph #63" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #63<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-66.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #66"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #66.">
+              <img src="../assets/images/gallery/campus-66.jpg" alt="Ibadan School for the Deaf campus photograph #66" width="1080" height="810" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #66<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-83.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #83"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #83.">
+              <img src="../assets/images/gallery/campus-83.jpg" alt="Ibadan School for the Deaf campus photograph #83" width="1040" height="780" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #83<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-81.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #81"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #81.">
+              <img src="../assets/images/gallery/campus-81.jpg" alt="Ibadan School for the Deaf campus photograph #81" width="1024" height="768" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #81<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-79.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #79"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #79.">
+              <img src="../assets/images/gallery/campus-79.jpg" alt="Ibadan School for the Deaf campus photograph #79" width="780" height="1040" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #79<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-80.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #80"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #80.">
+              <img src="../assets/images/gallery/campus-80.jpg" alt="Ibadan School for the Deaf campus photograph #80" width="780" height="1040" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #80<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-85.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #85"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #85.">
+              <img src="../assets/images/gallery/campus-85.jpg" alt="Ibadan School for the Deaf campus photograph #85" width="1040" height="780" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #85<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-87.jpg"
+              data-lightbox-alt="Students crafting decorative bead and textile designs at a vocational training workshop table"
+              data-lightbox-caption="Students practicing hands-on decorative craft and textile design during vocational training.">
+              <img src="../assets/images/gallery/campus-87.jpg" alt="Students crafting decorative bead and textile designs at a vocational training workshop table" width="1040" height="780" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Vocational Craft Workshop<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-31.jpg"
+              data-lightbox-alt="Students collaborating in traditional palm-oil processing practical life-skills training outdoors"
+              data-lightbox-caption="Students participating together in hands-on practical agricultural and life-skills training.">
+              <img src="../assets/images/gallery/campus-31.jpg" alt="Students collaborating in traditional palm-oil processing practical life-skills training outdoors" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Practical Life-Skills Training<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-33.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #33"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #33.">
+              <img src="../assets/images/gallery/campus-33.jpg" alt="Ibadan School for the Deaf campus photograph #33" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #33<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-35.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #35"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #35.">
+              <img src="../assets/images/gallery/campus-35.jpg" alt="Ibadan School for the Deaf campus photograph #35" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #35<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-34.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #34"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #34.">
+              <img src="../assets/images/gallery/campus-34.jpg" alt="Ibadan School for the Deaf campus photograph #34" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #34<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-36.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #36"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #36.">
+              <img src="../assets/images/gallery/campus-36.jpg" alt="Ibadan School for the Deaf campus photograph #36" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #36<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-30.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #30"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #30.">
+              <img src="../assets/images/gallery/campus-30.jpg" alt="Ibadan School for the Deaf campus photograph #30" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #30<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-37.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #37"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #37.">
+              <img src="../assets/images/gallery/campus-37.jpg" alt="Ibadan School for the Deaf campus photograph #37" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #37<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-40.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #40"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #40.">
+              <img src="../assets/images/gallery/campus-40.jpg" alt="Ibadan School for the Deaf campus photograph #40" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #40<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-42.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #42"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #42.">
+              <img src="../assets/images/gallery/campus-42.jpg" alt="Ibadan School for the Deaf campus photograph #42" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #42<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-11.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #11"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #11.">
+              <img src="../assets/images/gallery/campus-11.jpg" alt="Ibadan School for the Deaf campus photograph #11" width="1200" height="896" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #11<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-12.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #12"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #12.">
+              <img src="../assets/images/gallery/campus-12.jpg" alt="Ibadan School for the Deaf campus photograph #12" width="1200" height="896" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #12<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-13.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #13"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #13.">
+              <img src="../assets/images/gallery/campus-13.jpg" alt="Ibadan School for the Deaf campus photograph #13" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #13<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-1.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #1"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #1.">
+              <img src="../assets/images/gallery/campus-1.jpg" alt="Ibadan School for the Deaf campus photograph #1" width="895" height="1200" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #1<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-2.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #2"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #2.">
+              <img src="../assets/images/gallery/campus-2.jpg" alt="Ibadan School for the Deaf campus photograph #2" width="1200" height="902" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #2<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-3.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #3"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #3.">
+              <img src="../assets/images/gallery/campus-3.jpg" alt="Ibadan School for the Deaf campus photograph #3" width="1200" height="902" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #3<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-4.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #4"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #4.">
+              <img src="../assets/images/gallery/campus-4.jpg" alt="Ibadan School for the Deaf campus photograph #4" width="1200" height="905" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #4<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-5.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #5"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #5.">
+              <img src="../assets/images/gallery/campus-5.jpg" alt="Ibadan School for the Deaf campus photograph #5" width="1200" height="886" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #5<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-6.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #6"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #6.">
+              <img src="../assets/images/gallery/campus-6.jpg" alt="Ibadan School for the Deaf campus photograph #6" width="1200" height="902" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #6<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-7.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #7"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #7.">
+              <img src="../assets/images/gallery/campus-7.jpg" alt="Ibadan School for the Deaf campus photograph #7" width="1200" height="899" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #7<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-8.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #8"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #8.">
+              <img src="../assets/images/gallery/campus-8.jpg" alt="Ibadan School for the Deaf campus photograph #8" width="1200" height="893" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #8<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-9.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #9"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #9.">
+              <img src="../assets/images/gallery/campus-9.jpg" alt="Ibadan School for the Deaf campus photograph #9" width="1200" height="896" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #9<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-10.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #10"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #10.">
+              <img src="../assets/images/gallery/campus-10.jpg" alt="Ibadan School for the Deaf campus photograph #10" width="1200" height="883" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #10<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-14.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #14"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #14.">
+              <img src="../assets/images/gallery/campus-14.jpg" alt="Ibadan School for the Deaf campus photograph #14" width="762" height="1016" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #14<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-15.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #15"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #15.">
+              <img src="../assets/images/gallery/campus-15.jpg" alt="Ibadan School for the Deaf campus photograph #15" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #15<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-16.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #16"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #16.">
+              <img src="../assets/images/gallery/campus-16.jpg" alt="Ibadan School for the Deaf campus photograph #16" width="960" height="540" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #16<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-17.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #17"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #17.">
+              <img src="../assets/images/gallery/campus-17.jpg" alt="Ibadan School for the Deaf campus photograph #17" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #17<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-18.jpg"
+              data-lightbox-alt="Secondary school students in pink-and-green uniforms seated attentively in the school hall"
+              data-lightbox-caption="Secondary students gathered attentively inside the campus hall.">
+              <img src="../assets/images/gallery/campus-18.jpg" alt="Secondary school students in pink-and-green uniforms seated attentively in the school hall" width="960" height="540" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Secondary Students Assembly<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-19.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #19"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #19.">
+              <img src="../assets/images/gallery/campus-19.jpg" alt="Ibadan School for the Deaf campus photograph #19" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #19<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-20.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #20"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #20.">
+              <img src="../assets/images/gallery/campus-20.jpg" alt="Ibadan School for the Deaf campus photograph #20" width="608" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #20<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-21.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #21"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #21.">
+              <img src="../assets/images/gallery/campus-21.jpg" alt="Ibadan School for the Deaf campus photograph #21" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #21<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-22.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #22"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #22.">
+              <img src="../assets/images/gallery/campus-22.jpg" alt="Ibadan School for the Deaf campus photograph #22" width="929" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #22<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-23.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #23"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #23.">
+              <img src="../assets/images/gallery/campus-23.jpg" alt="Ibadan School for the Deaf campus photograph #23" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #23<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-24.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #24"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #24.">
+              <img src="../assets/images/gallery/campus-24.jpg" alt="Ibadan School for the Deaf campus photograph #24" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #24<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-25.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #25"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #25.">
+              <img src="../assets/images/gallery/campus-25.jpg" alt="Ibadan School for the Deaf campus photograph #25" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #25<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-26.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #26"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #26.">
+              <img src="../assets/images/gallery/campus-26.jpg" alt="Ibadan School for the Deaf campus photograph #26" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #26<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-27.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #27"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #27.">
+              <img src="../assets/images/gallery/campus-27.jpg" alt="Ibadan School for the Deaf campus photograph #27" width="608" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #27<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-28.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #28"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #28.">
+              <img src="../assets/images/gallery/campus-28.jpg" alt="Ibadan School for the Deaf campus photograph #28" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #28<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-29.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #29"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #29.">
+              <img src="../assets/images/gallery/campus-29.jpg" alt="Ibadan School for the Deaf campus photograph #29" width="960" height="540" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #29<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-32.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #32"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #32.">
+              <img src="../assets/images/gallery/campus-32.jpg" alt="Ibadan School for the Deaf campus photograph #32" width="960" height="540" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #32<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-38.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #38"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #38.">
+              <img src="../assets/images/gallery/campus-38.jpg" alt="Ibadan School for the Deaf campus photograph #38" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #38<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-39.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #39"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #39.">
+              <img src="../assets/images/gallery/campus-39.jpg" alt="Ibadan School for the Deaf campus photograph #39" width="929" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #39<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-41.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #41"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #41.">
+              <img src="../assets/images/gallery/campus-41.jpg" alt="Ibadan School for the Deaf campus photograph #41" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #41<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-43.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #43"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #43.">
+              <img src="../assets/images/gallery/campus-43.jpg" alt="Ibadan School for the Deaf campus photograph #43" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #43<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-44.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #44"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #44.">
+              <img src="../assets/images/gallery/campus-44.jpg" alt="Ibadan School for the Deaf campus photograph #44" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #44<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-45.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #45"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #45.">
+              <img src="../assets/images/gallery/campus-45.jpg" alt="Ibadan School for the Deaf campus photograph #45" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #45<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-46.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #46"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #46.">
+              <img src="../assets/images/gallery/campus-46.jpg" alt="Ibadan School for the Deaf campus photograph #46" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #46<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-47.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #47"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #47.">
+              <img src="../assets/images/gallery/campus-47.jpg" alt="Ibadan School for the Deaf campus photograph #47" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #47<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-48.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #48"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #48.">
+              <img src="../assets/images/gallery/campus-48.jpg" alt="Ibadan School for the Deaf campus photograph #48" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #48<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-49.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #49"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #49.">
+              <img src="../assets/images/gallery/campus-49.jpg" alt="Ibadan School for the Deaf campus photograph #49" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #49<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-50.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #50"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #50.">
+              <img src="../assets/images/gallery/campus-50.jpg" alt="Ibadan School for the Deaf campus photograph #50" width="810" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #50<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-51.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #51"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #51.">
+              <img src="../assets/images/gallery/campus-51.jpg" alt="Ibadan School for the Deaf campus photograph #51" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #51<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-52.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #52"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #52.">
+              <img src="../assets/images/gallery/campus-52.jpg" alt="Ibadan School for the Deaf campus photograph #52" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #52<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-53.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #53"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #53.">
+              <img src="../assets/images/gallery/campus-53.jpg" alt="Ibadan School for the Deaf campus photograph #53" width="810" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #53<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-55.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #55"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #55.">
+              <img src="../assets/images/gallery/campus-55.jpg" alt="Ibadan School for the Deaf campus photograph #55" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #55<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-56.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #56"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #56.">
+              <img src="../assets/images/gallery/campus-56.jpg" alt="Ibadan School for the Deaf campus photograph #56" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #56<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-58.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #58"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #58.">
+              <img src="../assets/images/gallery/campus-58.jpg" alt="Ibadan School for the Deaf campus photograph #58" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #58<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-59.jpg"
+              data-lightbox-alt="Young pupils in school uniforms signing joyfully with teachers outside the school office"
+              data-lightbox-caption="Pupils and educators signing together outside the Administrative Office at Ijokodo.">
+              <img src="../assets/images/gallery/campus-59.jpg" alt="Young pupils in school uniforms signing joyfully with teachers outside the school office" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Students & Educators Signing<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-60.jpg"
+              data-lightbox-alt="Pupils and staff signing I Love You outside the Administrative Office beneath the 60 Years Anniversary banner"
+              data-lightbox-caption="Pupils and staff celebrating 60 years of Ibadan School for the Deaf (1963–2023) outside the Administrative Office.">
+              <img src="../assets/images/gallery/campus-60.jpg" alt="Pupils and staff signing I Love You outside the Administrative Office beneath the 60 Years Anniversary banner" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">60th Anniversary Celebration<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-61.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #61"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #61.">
+              <img src="../assets/images/gallery/campus-61.jpg" alt="Ibadan School for the Deaf campus photograph #61" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #61<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-62.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #62"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #62.">
+              <img src="../assets/images/gallery/campus-62.jpg" alt="Ibadan School for the Deaf campus photograph #62" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #62<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-64.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #64"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #64.">
+              <img src="../assets/images/gallery/campus-64.jpg" alt="Ibadan School for the Deaf campus photograph #64" width="809" height="1080" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #64<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-74.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #74"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #74.">
+              <img src="../assets/images/gallery/campus-74.jpg" alt="Ibadan School for the Deaf campus photograph #74" width="768" height="1024" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #74<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-75.jpg"
+              data-lightbox-alt="Boarding students sharing a nutritious communal meal inside the school dining hall"
+              data-lightbox-caption="Boarding students enjoying a communal meal in the school dining hall.">
+              <img src="../assets/images/gallery/campus-75.jpg" alt="Boarding students sharing a nutritious communal meal inside the school dining hall" width="1080" height="511" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">School Dining Hall<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-77.jpg"
+              data-lightbox-alt="Female boarding students standing happily beside neatly arranged bunk beds in the dormitory"
+              data-lightbox-caption="Boarding students inside the campus dormitory at Ibadan School for the Deaf.">
+              <img src="../assets/images/gallery/campus-77.jpg" alt="Female boarding students standing happily beside neatly arranged bunk beds in the dormitory" width="1080" height="809" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Girls Boarding Dormitory<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-78.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #78"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #78.">
+              <img src="../assets/images/gallery/campus-78.jpg" alt="Ibadan School for the Deaf campus photograph #78" width="1024" height="768" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #78<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="campus-live">
+            <button type="button" class="gallery-trigger"
+              data-lightbox-src="../assets/images/gallery/campus-82.jpg"
+              data-lightbox-alt="Ibadan School for the Deaf campus photograph #82"
+              data-lightbox-caption="Ibadan School for the Deaf — Campus Life & Community Photograph #82.">
+              <img src="../assets/images/gallery/campus-82.jpg" alt="Ibadan School for the Deaf campus photograph #82" width="768" height="1024" loading="lazy" decoding="async">
+              <span class="gallery-zoom-hint">Enlarge</span>
+            </button>
+            <figcaption class="gallery-caption">Campus Life Moment #82<span>Campus Gallery</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/audiology-classroom-color.jpg"
               data-lightbox-alt="Pupils wearing red speech and audiology headphones at classroom consoles"
-              data-lightbox-caption="Pupils in uniform participating in a specialist audiology and speech-training class.">
-              <img src="../assets/images/audiology-classroom-color.jpg" alt="Pupils wearing red speech and audiology headphones at classroom consoles" width="561" height="370" loading="eager">
+              data-lightbox-caption="Historical Archive: Pupils in uniform participating in a specialist audiology and speech-training class.">
+              <img src="../assets/images/audiology-classroom-color.jpg" alt="Pupils wearing red speech and audiology headphones at classroom consoles" width="561" height="370" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Audiology &amp; Speech Lab<span>Classroom &amp; Audiology</span></figcaption>
+            <figcaption class="gallery-caption">Audiology &amp; Speech Lab<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="classroom">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/audiology-pupils-early.jpg"
               data-lightbox-alt="Two young pupils practicing with early audiology headsets and microphones"
-              data-lightbox-caption="Young pupils receiving individualized speech and auditory training.">
-              <img src="../assets/images/audiology-pupils-early.jpg" alt="Two young pupils practicing with early audiology headsets and microphones" width="359" height="224" loading="eager">
+              data-lightbox-caption="Historical Archive: Young pupils receiving individualized speech and auditory training.">
+              <img src="../assets/images/audiology-pupils-early.jpg" alt="Two young pupils practicing with early audiology headsets and microphones" width="359" height="224" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Early Speech Training<span>Classroom &amp; Audiology</span></figcaption>
+            <figcaption class="gallery-caption">Early Speech Training<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="classroom">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/classroom-word-drill.jpg"
               data-lightbox-alt="Teacher conducting a word drill for initial, medial, and final B sounds at the chalkboard"
-              data-lightbox-caption="Structured literacy and pronunciation word drill at the chalkboard.">
-              <img src="../assets/images/classroom-word-drill.jpg" alt="Teacher conducting a word drill for initial, medial, and final B sounds at the chalkboard" width="513" height="357" loading="eager">
+              data-lightbox-caption="Historical Archive: Structured literacy and pronunciation word drill at the chalkboard.">
+              <img src="../assets/images/classroom-word-drill.jpg" alt="Teacher conducting a word drill for initial, medial, and final B sounds at the chalkboard" width="513" height="357" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Chalkboard Word Drill<span>Classroom &amp; Audiology</span></figcaption>
+            <figcaption class="gallery-caption">Chalkboard Word Drill<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="classroom">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/visual-flashcards-lesson.jpg"
               data-lightbox-alt="Teacher showing visual flashcards to attentive deaf pupils seated around a classroom table"
-              data-lightbox-caption="Interactive visual flashcards lesson supporting comprehension and vocabulary.">
-              <img src="../assets/images/visual-flashcards-lesson.jpg" alt="Teacher showing visual flashcards to attentive deaf pupils seated around a classroom table" width="686" height="508" loading="lazy">
+              data-lightbox-caption="Historical Archive: Interactive visual flashcards lesson supporting comprehension and vocabulary.">
+              <img src="../assets/images/visual-flashcards-lesson.jpg" alt="Teacher showing visual flashcards to attentive deaf pupils seated around a classroom table" width="686" height="508" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Visual Flashcards Instruction<span>Classroom &amp; Audiology</span></figcaption>
+            <figcaption class="gallery-caption">Visual Flashcards Instruction<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="classroom">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/students-signing-class.jpg"
               data-lightbox-alt="Students signing together during an expressive classroom session"
-              data-lightbox-caption="Pupils engaging together in sign-language communication in class.">
-              <img src="../assets/images/students-signing-class.jpg" alt="Students signing together during an expressive classroom session" width="417" height="316" loading="lazy">
+              data-lightbox-caption="Historical Archive: Pupils engaging together in sign-language communication in class.">
+              <img src="../assets/images/students-signing-class.jpg" alt="Students signing together during an expressive classroom session" width="417" height="316" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Sign Language Expression<span>Classroom &amp; Audiology</span></figcaption>
+            <figcaption class="gallery-caption">Sign Language Expression<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="classroom">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/netherlands-classroom-block.jpg"
               data-lightbox-alt="Pupils writing at desks in the classroom block donated by the Netherlands Children Stamp Committee"
-              data-lightbox-caption="Class in session inside the block donated by the Netherlands Children Stamp Committee.">
-              <img src="../assets/images/netherlands-classroom-block.jpg" alt="Pupils writing at desks in the classroom block donated by the Netherlands Children Stamp Committee" width="445" height="336" loading="lazy">
+              data-lightbox-caption="Historical Archive: Class in session inside the block donated by the Netherlands Children Stamp Committee.">
+              <img src="../assets/images/netherlands-classroom-block.jpg" alt="Pupils writing at desks in the classroom block donated by the Netherlands Children Stamp Committee" width="445" height="336" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Netherlands Partner Classroom<span>Classroom &amp; Audiology</span></figcaption>
+            <figcaption class="gallery-caption">Netherlands Partner Classroom<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="sports">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/stadium-march-past.jpg"
               data-lightbox-alt="Students marching on a stadium track holding the Ibadan School for the Deaf banner"
-              data-lightbox-caption="Students marching proudly at the stadium with the Ibadan School for the Deaf banner.">
-              <img src="../assets/images/stadium-march-past.jpg" alt="Students marching on a stadium track holding the Ibadan School for the Deaf banner" width="420" height="312" loading="lazy">
+              data-lightbox-caption="Historical Archive: Students marching proudly at the stadium with the Ibadan School for the Deaf banner.">
+              <img src="../assets/images/stadium-march-past.jpg" alt="Students marching on a stadium track holding the Ibadan School for the Deaf banner" width="420" height="312" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Stadium Athletics March-Past<span>Sports &amp; Culture</span></figcaption>
+            <figcaption class="gallery-caption">Stadium Athletics March-Past<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="sports">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/stadium-parade-banner.jpg"
               data-lightbox-alt="Pupils marching in crisp white uniforms carrying the Ibadan School for the Deaf banner before stadium crowds"
-              data-lightbox-caption="Historic stadium parade showcasing student discipline and school pride.">
-              <img src="../assets/images/stadium-parade-banner.jpg" alt="Pupils marching in crisp white uniforms carrying the Ibadan School for the Deaf banner before stadium crowds" width="471" height="281" loading="lazy">
+              data-lightbox-caption="Historical Archive: Historic stadium parade showcasing student discipline and school pride.">
+              <img src="../assets/images/stadium-parade-banner.jpg" alt="Pupils marching in crisp white uniforms carrying the Ibadan School for the Deaf banner before stadium crowds" width="471" height="281" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Inter-School Parade<span>Sports &amp; Culture</span></figcaption>
+            <figcaption class="gallery-caption">Inter-School Parade<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="sports">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/cultural-dance-pupils.jpg"
               data-lightbox-alt="Female pupils performing a traditional Yoruba cultural dance outdoors"
-              data-lightbox-caption="Cultural dance celebration on campus showcasing rhythm, teamwork, and heritage.">
-              <img src="../assets/images/cultural-dance-pupils.jpg" alt="Female pupils performing a traditional Yoruba cultural dance outdoors" width="509" height="353" loading="lazy">
+              data-lightbox-caption="Historical Archive: Cultural dance celebration on campus showcasing rhythm, teamwork, and heritage.">
+              <img src="../assets/images/cultural-dance-pupils.jpg" alt="Female pupils performing a traditional Yoruba cultural dance outdoors" width="509" height="353" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Traditional Cultural Dance<span>Sports &amp; Culture</span></figcaption>
+            <figcaption class="gallery-caption">Traditional Cultural Dance<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="sports">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/outdoor-table-tennis.jpg"
               data-lightbox-alt="Students playing outdoor table tennis on the school grounds with a visiting supporter"
-              data-lightbox-caption="Outdoor table tennis match encouraging recreation and social interaction.">
-              <img src="../assets/images/outdoor-table-tennis.jpg" alt="Students playing outdoor table tennis on the school grounds with a visiting supporter" width="539" height="378" loading="lazy">
+              data-lightbox-caption="Historical Archive: Outdoor table tennis match encouraging recreation and social interaction.">
+              <img src="../assets/images/outdoor-table-tennis.jpg" alt="Students playing outdoor table tennis on the school grounds with a visiting supporter" width="539" height="378" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Outdoor Table Tennis<span>Sports &amp; Culture</span></figcaption>
+            <figcaption class="gallery-caption">Outdoor Table Tennis<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="visits">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/governor-jemibewon-handshake.jpg"
               data-lightbox-alt="Major General David Jemibewon shaking hands warmly with a smiling deaf pupil"
-              data-lightbox-caption="Military Governor of Oyo State Major General David Jemibewon greeting a pupil during his visit.">
-              <img src="../assets/images/governor-jemibewon-handshake.jpg" alt="Major General David Jemibewon shaking hands warmly with a smiling deaf pupil" width="593" height="448" loading="lazy">
+              data-lightbox-caption="Historical Archive: Military Governor of Oyo State Major General David Jemibewon greeting a pupil during his visit.">
+              <img src="../assets/images/governor-jemibewon-handshake.jpg" alt="Major General David Jemibewon shaking hands warmly with a smiling deaf pupil" width="593" height="448" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Governor Jemibewon Greeting Pupil<span>Historic Visits</span></figcaption>
+            <figcaption class="gallery-caption">Governor Jemibewon Greeting Pupil<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="visits">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/founder-welcoming-governor.jpg"
               data-lightbox-alt="Founder Chief Mrs A.O. Oyesola welcoming Major General David Jemibewon and state officials"
-              data-lightbox-caption="Founder Chief (Mrs.) A.O. Oyesola welcoming Oyo State Military Governor Major General David Jemibewon.">
-              <img src="../assets/images/founder-welcoming-governor.jpg" alt="Founder Chief Mrs A.O. Oyesola welcoming Major General David Jemibewon and state officials" width="464" height="349" loading="lazy">
+              data-lightbox-caption="Historical Archive: Founder Chief (Mrs.) A.O. Oyesola welcoming Oyo State Military Governor Major General David Jemibewon.">
+              <img src="../assets/images/founder-welcoming-governor.jpg" alt="Founder Chief Mrs A.O. Oyesola welcoming Major General David Jemibewon and state officials" width="464" height="349" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Founder Welcoming State Delegation<span>Historic Visits</span></figcaption>
+            <figcaption class="gallery-caption">Founder Welcoming State Delegation<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="visits">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/governor-jemibewon-classroom.jpg"
               data-lightbox-alt="Founder and Governor Jemibewon observing a young pupil writing numbers on the chalkboard"
-              data-lightbox-caption="State officials observing a live classroom mathematics lesson.">
-              <img src="../assets/images/governor-jemibewon-classroom.jpg" alt="Founder and Governor Jemibewon observing a young pupil writing numbers on the chalkboard" width="451" height="357" loading="lazy">
+              data-lightbox-caption="Historical Archive: State officials observing a live classroom mathematics lesson.">
+              <img src="../assets/images/governor-jemibewon-classroom.jpg" alt="Founder and Governor Jemibewon observing a young pupil writing numbers on the chalkboard" width="451" height="357" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Classroom Lesson Observation<span>Historic Visits</span></figcaption>
+            <figcaption class="gallery-caption">Classroom Lesson Observation<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="campus">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/founder-oyesola.jpg"
-              data-lightbox-alt="Portrait of Founder Late Chief Mrs Omodele Adelaide Oyesola"
-              data-lightbox-caption="Portrait of Late Chief (Mrs.) Omodele Adelaide Oyesola, M.O.N., J.P. — Founder of Ibadan School for the Deaf.">
-              <img src="../assets/images/founder-oyesola.jpg" alt="Portrait of Founder Late Chief Mrs Omodele Adelaide Oyesola" width="265" height="416" loading="lazy">
+              data-lightbox-alt="Archival portrait of Founder Late Chief Mrs Omodele Adelaide Oyesola"
+              data-lightbox-caption="Historical Archive: Portrait of Late Chief (Mrs.) Omodele Adelaide Oyesola, M.O.N., J.P. — Founder of Ibadan School for the Deaf.">
+              <img src="../assets/images/founder-oyesola.jpg" alt="Archival portrait of Founder Late Chief Mrs Omodele Adelaide Oyesola" width="265" height="416" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Founder Chief (Mrs.) A.O. Oyesola<span>Campus &amp; Heritage</span></figcaption>
+            <figcaption class="gallery-caption">Founder Archival Portrait<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="campus">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/campus-building-historic.jpg"
               data-lightbox-alt="Early permanent school building block at Ijokodo with pupils gathered outside"
-              data-lightbox-caption="Early permanent campus building at Ijokodo with pupils gathered in front.">
-              <img src="../assets/images/campus-building-historic.jpg" alt="Early permanent school building block at Ijokodo with pupils gathered outside" width="503" height="286" loading="lazy">
+              data-lightbox-caption="Historical Archive: Early permanent campus building at Ijokodo with pupils gathered in front.">
+              <img src="../assets/images/campus-building-historic.jpg" alt="Early permanent school building block at Ijokodo with pupils gathered outside" width="503" height="286" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Early Ijokodo Campus Block<span>Campus &amp; Heritage</span></figcaption>
+            <figcaption class="gallery-caption">Early Ijokodo Campus Block<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="campus">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/foundation-laying-ceremony.jpg"
               data-lightbox-alt="Dignitaries and community members gathered for an early campus foundation-laying ceremony"
-              data-lightbox-caption="Foundation-laying ceremony during early construction at the permanent Ijokodo site.">
-              <img src="../assets/images/foundation-laying-ceremony.jpg" alt="Dignitaries and community members gathered for an early campus foundation-laying ceremony" width="359" height="212" loading="lazy">
+              data-lightbox-caption="Historical Archive: Foundation-laying ceremony during early construction at the permanent Ijokodo site.">
+              <img src="../assets/images/foundation-laying-ceremony.jpg" alt="Dignitaries and community members gathered for an early campus foundation-laying ceremony" width="359" height="212" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Foundation-Laying Ceremony<span>Campus &amp; Heritage</span></figcaption>
+            <figcaption class="gallery-caption">Foundation-Laying Ceremony<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="campus">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/early-community-group.jpg"
               data-lightbox-alt="Group portrait of early teachers, visiting international guests, and pupils in front of a school block"
-              data-lightbox-caption="Early staff, international visitors, and pupils gathered in front of the school block.">
-              <img src="../assets/images/early-community-group.jpg" alt="Group portrait of early teachers, visiting international guests, and pupils in front of a school block" width="477" height="311" loading="lazy">
+              data-lightbox-caption="Historical Archive: Early staff, international visitors, and pupils gathered in front of the school block.">
+              <img src="../assets/images/early-community-group.jpg" alt="Group portrait of early teachers, visiting international guests, and pupils in front of a school block" width="477" height="311" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Staff, Guests &amp; Pupils Group<span>Campus &amp; Heritage</span></figcaption>
+            <figcaption class="gallery-caption">Staff, Guests &amp; Pupils Group<span>Historical Archive</span></figcaption>
           </figure>
 
-          <figure class="gallery-card" data-category="campus">
+          <figure class="gallery-card" data-category="archive">
             <button type="button" class="gallery-trigger"
               data-lightbox-src="../assets/images/school-assembly-historic.jpg"
               data-lightbox-alt="Large gathering of pupils lined up during a historic outdoor school assembly"
-              data-lightbox-caption="Pupils gathered for a campus assembly as the school grew rapidly at Ijokodo.">
-              <img src="../assets/images/school-assembly-historic.jpg" alt="Large gathering of pupils lined up during a historic outdoor school assembly" width="347" height="224" loading="lazy">
+              data-lightbox-caption="Historical Archive: Pupils gathered for a campus assembly as the school grew rapidly at Ijokodo.">
+              <img src="../assets/images/school-assembly-historic.jpg" alt="Large gathering of pupils lined up during a historic outdoor school assembly" width="347" height="224" loading="lazy" decoding="async">
               <span class="gallery-zoom-hint">Enlarge</span>
             </button>
-            <figcaption class="gallery-caption">Historic School Assembly<span>Campus &amp; Heritage</span></figcaption>
+            <figcaption class="gallery-caption">Historic School Assembly<span>Historical Archive</span></figcaption>
           </figure>
+        </div>
+
+        <div class="gallery-load-wrap">
+          <button type="button" class="btn btn-primary btn-lg" id="gallery-load-more">Load 24 More Photos</button>
+          <button type="button" class="btn btn-outline-primary btn-lg" id="gallery-show-all">Show All in Collection</button>
         </div>
 
         <!-- Video Accessibility Note -->
         <div class="notice-box mt-3 reveal" role="note">
           <h3>Video Gallery &amp; Sign-Language Accessibility Note</h3>
           <p>
-            Official recent campus photographs and captioned videos (with full text transcripts and sign-language interpretation where applicable) will be added here once supplied directly by school administration. All future video uploads must include synchronized captions and a written transcript so no important information depends exclusively on audio.
+            Official captioned campus videos (with full text transcripts and sign-language interpretation where applicable) will be published here once confirmed with accessible caption tracks by school administration so no important information relies exclusively on audio.
           </p>
         </div>
       </div>
