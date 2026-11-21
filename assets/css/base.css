@@ -134,6 +134,16 @@ strong {
   font-weight: 700;
 }
 
+.on-dark strong,
+.section-dark strong,
+.site-footer strong {
+  color: #FFFFFF;
+}
+
+.bank-card strong {
+  color: var(--text-main);
+}
+
 /* ── Section Header System ── */
 .section {
   padding: var(--section-py) var(--section-px);
@@ -207,10 +217,11 @@ strong {
 }
 
 .section-dark .sec-label,
+.why-section .sec-label,
 .support-section .sec-label {
   background: rgba(147, 197, 253, 0.16);
   color: var(--blue-sky);
-  border: 1px solid rgba(147, 197, 253, 0.28);
+  border: 1px solid rgba(147, 197, 253, 0.34);
 }
 
 .sec-title {

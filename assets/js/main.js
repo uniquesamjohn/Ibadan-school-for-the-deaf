@@ -684,7 +684,7 @@ function initValidatedForms() {
         feedback.innerHTML = `
           <p><strong>Validation passed — online submission backend pending integration.</strong></p>
           <p style="margin-top:0.45rem;">This static website does not store or transmit form entries to a server yet. No data has been submitted automatically.</p>
-          <p style="margin-top:0.65rem;">To send your details directly to Ibadan School for the Deaf right now, you can open a pre-filled email draft or call <strong>08035851464</strong> / <strong>+234-806-006-0642</strong>:</p>
+          <p style="margin-top:0.65rem;">To send your details directly to Ibadan School for the Deaf right now, you can open a pre-filled email draft or call <strong>+234-803-585-1464</strong> / <strong>+234-806-006-0642</strong>:</p>
           <p style="margin-top:0.75rem;">
             <a class="btn btn-primary btn-sm" href="${mailtoHref}">Open Pre-Filled Email Draft</a>
           </p>`;

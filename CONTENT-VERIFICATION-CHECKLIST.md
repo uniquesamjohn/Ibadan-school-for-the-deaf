@@ -24,7 +24,7 @@ This audit separates **verified source content**, **questionable legacy-website 
 - [x] **Official Name**: Ibadan School for the Deaf (founded 1963 as *Home for the Young Deaf* -> *Home School for the Deaf*).
 - [x] **Campus Address**: Polytechnic Road, Ijokodo Junction, Ibadan, Oyo State, Nigeria.
 - [x] **Postal Address**: P.O. Box 1965, Dugbe, Ibadan.
-- [x] **Telephone**: `08035851464`, `+234-806-006-0642`.
+- [x] **Telephone**: `+234-803-585-1464`, `+234-806-006-0642`.
 - [x] **Official Email**: `ibadanschoolforthedeaf@gmail.com`, `info@ibadanschoolforthedeaf.com.ng`.
 - [x] **Official Vision Statement**: Verbatim from `ibadanschoolforthedeaf.com.ng` homepage.
 - [x] **Founders**: Late Chief (Mrs.) Omodele Adelaide Oyesola (M.O.N., J.P.; Iya Abiye of Ibadanland) and Late Chief Jacob Oluseye Oyesola.
