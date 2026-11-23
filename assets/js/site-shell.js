@@ -18,7 +18,7 @@
   const isCurrent = (key) => (currentPage === key ? ' aria-current="page"' : '');
   const isGroupActive = (keys) => (keys.includes(currentPage) ? ' is-active' : '');
 
-  const aboutKeys = ['who-we-are', 'our-people-and-team', 'our-partner'];
+  const aboutKeys = ['who-we-are', 'about-the-founder', 'our-people-and-team', 'our-partner'];
   const newsKeys = ['news-and-events', 'achievements', 'gallery', 'news', 'events'];
 
   // Update placeholder '#' values below when official social media URLs are ready
@@ -82,6 +82,7 @@
               </button>
               <div class="dropdown-panel" id="menu-about" role="menu" aria-label="About Us subpages">
                 <a class="dropdown-link" role="menuitem" href="${href('about/who-we-are.html')}"${isCurrent('who-we-are')}>Who We Are</a>
+                <a class="dropdown-link" role="menuitem" href="${href('about/about-the-founder.html')}"${isCurrent('about-the-founder')}>About the Founder</a>
                 <a class="dropdown-link" role="menuitem" href="${href('about/our-people-and-team.html')}"${isCurrent('our-people-and-team')}>Our People and Team</a>
                 <a class="dropdown-link" role="menuitem" href="${href('about/our-partner.html')}"${isCurrent('our-partner')}>Our Partner</a>
               </div>
@@ -141,6 +142,7 @@
           </button>
           <div class="mob-sub-list" id="mob-about" hidden>
             <a href="${href('about/who-we-are.html')}"${isCurrent('who-we-are')}>Who We Are</a>
+            <a href="${href('about/about-the-founder.html')}"${isCurrent('about-the-founder')}>About the Founder</a>
             <a href="${href('about/our-people-and-team.html')}"${isCurrent('our-people-and-team')}>Our People and Team</a>
             <a href="${href('about/our-partner.html')}"${isCurrent('our-partner')}>Our Partner</a>
           </div>
@@ -216,6 +218,7 @@
           <h3>Quick Links</h3>
           <ul class="footer-links">
             <li><a href="${href('about/who-we-are.html')}">Who We Are</a></li>
+            <li><a href="${href('about/about-the-founder.html')}">About the Founder</a></li>
             <li><a href="${href('about/our-people-and-team.html')}">Our People and Team</a></li>
             <li><a href="${href('about/our-partner.html')}">Our Partner</a></li>
             <li><a href="${href('admissions/index.html')}">Admissions</a></li>
